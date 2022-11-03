@@ -2,3 +2,15 @@
   margin: 0;
   padding: 0;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  height: 100vh;
+}
+
+.grid-top {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
