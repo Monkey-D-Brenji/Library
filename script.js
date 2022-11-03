@@ -1,6 +1,7 @@
 let myLibrary = [];
 
 const bookLibrary = document.querySelector(".book-library");
+const card = document.querySelector(".card");
 
 function Book(title, author, read) {
   this.title = title;
@@ -8,7 +9,15 @@ function Book(title, author, read) {
   this.read = read;
 }
 
-function addBookToLibrary(book) {}
+function addBookToLibrary(aBook) {
+  myLibrary += aBook;
+}
+
+function bookLoop() {
+  for (let book in myLibrary) {
+    card.textContent = book;
+  }
+}
 
 const button = document.querySelector("button");
 button.addEventListener(click, () => {});
