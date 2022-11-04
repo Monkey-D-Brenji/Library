@@ -6,6 +6,10 @@
 :root {
   --font: #2e3a3a;
   --hover: #ebceae;
+  --active: #d8b896;
+  --table-border: #fadbaf;
+  --table-odd: #ffecd2;
+  --table-even: #fce5c6;
 }
 
 /*Grid*/
@@ -35,6 +39,11 @@ h1 {
   grid-template-rows: 100px;
 }
 
+.add-button {
+  display: grid;
+  justify-content: center;
+}
+
 /*Form*/
 
 .form {
@@ -56,4 +65,49 @@ h1 {
 .add-button > button:hover {
   cursor: pointer;
   background-color: var(--hover);
+}
+
+.add-button > button:active {
+  background-color: var(--active);
+}
+
+.table-button {
+  padding: 0px 5px;
+}
+
+/*Table*/
+
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--table-border);
+  box-shadow: 1px 1px 5px 3px var(--table-border);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  width: 40vw;
+}
+
+td,
+th {
+  border: 1px solid var(--hover);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: #f1dfc5;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: var(--table-even);
+}
+
+tr:nth-child(odd) td {
+  background-color: var(--table-even);
+}
+
+caption {
+  padding: 10px;
 }
