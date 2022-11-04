@@ -3,11 +3,16 @@
   padding: 0;
 }
 
+:root {
+  --font: #232b2b;
+}
+
 .grid-container {
   display: grid;
   grid-template-rows: 1fr 5fr;
   height: 100vh;
   background-image: linear-gradient(#ffecd2 10%, #fcb69f);
+  color: var(--font);
 }
 
 .grid-top {
@@ -31,6 +36,8 @@
   font-size: 1.5rem;
   border: none;
   background-color: inherit;
+  color: var(--font);
+  font-weight: bold;
 }
 
 h1 {
