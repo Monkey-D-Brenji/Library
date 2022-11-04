@@ -18,9 +18,21 @@
 .grid-bottom {
   display: grid;
   justify-content: center;
-  grid-template-rows: 50px;
+  grid-template-rows: 100px;
 }
 
 .form {
   display: none;
+}
+
+.add-button > button {
+  padding: 15px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: inherit;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
 }
