@@ -7,6 +7,7 @@
   display: grid;
   grid-template-rows: 1fr 5fr;
   height: 100vh;
+  background-image: linear-gradient(#ffecd2 10%, #fcb69f);
 }
 
 .grid-top {
