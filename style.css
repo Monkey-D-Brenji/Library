@@ -60,6 +60,7 @@ h1 {
   color: var(--font);
   font-weight: bold;
   border-radius: 15px;
+  margin-bottom: 30px;
 }
 
 .add-button > button:hover {
@@ -94,6 +95,7 @@ th {
 
 th {
   background-color: #f1dfc5;
+  font-weight: bold;
 }
 
 td {
