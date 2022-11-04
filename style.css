@@ -40,6 +40,10 @@
   font-weight: bold;
 }
 
+.add-button > button:hover {
+  cursor: pointer;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: bold;
