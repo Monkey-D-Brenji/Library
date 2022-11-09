@@ -4,6 +4,7 @@ const bookLibrary = document.querySelector(".book-library");
 const card = document.querySelector(".card");
 const form = document.querySelector(".form");
 const add = document.querySelector(".add-button1");
+const close = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
 
 function Book(title, author, read) {
@@ -30,8 +31,19 @@ function openTheForm() {
 
 function closeTheForm() {
   form.style.display = "none";
+  overlay.style.display = "none";
 }
 
 add.addEventListener("click", () => {
   openTheForm();
+});
+
+close.addEventListener("click", () => {
+  closeTheForm();
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target == overlay) {
+    closeTheForm();
+  }
 });

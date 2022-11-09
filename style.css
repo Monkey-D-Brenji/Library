@@ -132,20 +132,29 @@ h2 {
 }
 
 .close-button:hover,
-.add-button > button:hover {
+.add-button > button:hover,
+.submit:hover,
+.table-button:hover {
   cursor: pointer;
 }
 
-.add-button > button:hover {
+.add-button > button:hover,
+.submit:active {
   background-color: var(--hover);
 }
 
-.add-button > button:active {
+.add-button > button:active,
+.table-button:active {
   background-color: var(--active);
 }
 
 .table-button {
-  padding: 0px 5px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--font);
+  color: var(--font);
+  box-shadow: 1px 1px 2px 0px var(--font);
+  background-color: inherit;
 }
 
 /*Table*/
