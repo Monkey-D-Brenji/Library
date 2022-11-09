@@ -4,6 +4,7 @@ const bookLibrary = document.querySelector(".book-library");
 const card = document.querySelector(".card");
 const form = document.querySelector(".form");
 const add = document.querySelector(".add-button1");
+const overlay = document.querySelector(".overlay");
 
 function Book(title, author, read) {
   this.title = title;
@@ -24,6 +25,7 @@ function bookLoop() {
 
 function openTheForm() {
   form.style.display = "flex";
+  overlay.style.display = "block";
 }
 
 function closeTheForm() {
