@@ -11,19 +11,32 @@
   <body>
     <div class="form">
       <form action="#">
+        <h2>New Book</h2>
         <div>
-          <label for="title"></label>
-          <input type="text" name="title" id="title" />
+          <label class="input-text" for="title">Book Title</label>
+          <input class="input-text" type="text" name="title" id="title" />
         </div>
         <div>
-          <label for="author"></label>
-          <input type="text" name="author" id="author" />
+          <label class="input-text" for="author">Book Author</label>
+          <input class="input-text" type="text" name="author" id="author" />
         </div>
         <div>
-          <input type="radio" name="read" id="read" value="read" />
-          <label for="read">Read</label>
-          <input type="radio" name="unread" id="unread" value="unread" />
-          <label for="unread">Unread</label>
+          <input
+            class="radio"
+            type="radio"
+            name="read"
+            id="read"
+            value="read"
+          />
+          <label class="radio" for="read">Read</label>
+          <input
+            class="radio"
+            type="radio"
+            name="read"
+            id="unread"
+            value="unread"
+          />
+          <label class="radio" for="unread">Unread</label>
         </div>
       </form>
     </div>

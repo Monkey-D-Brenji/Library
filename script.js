@@ -23,7 +23,7 @@ function bookLoop() {
 }
 
 function openTheForm() {
-  form.style.display = "block";
+  form.style.display = "flex";
 }
 
 function closeTheForm() {
