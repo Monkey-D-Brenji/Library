@@ -51,22 +51,28 @@ function addLibrary() {
     tableBody.appendChild(tableRow);
 
     for (let key in object) {
-      if (object.hasOwnProperty(key)) {
-        if (key.read) {
-          btn.textContent = `${object[key]}`;
-          const tableData = document.createElement("td");
-          tableData.appendChild(btn);
-          tableRow.appendChild(tableData);
+      if (object[key] == object["read"]) {
+        const tableData = document.createElement("td");
+        const btn = document.createElement("button");
+
+        function capitalizeFirstLetter(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
         }
 
+        btn.textContent = capitalizeFirstLetter(`${object[key]}`);
+        btn.classList.add("table-button", "read-button");
+        tableData.appendChild(btn);
+        tableRow.appendChild(tableData);
+      } else if (object.hasOwnProperty(key)) {
         const tableData = document.createElement("td");
-        tableData.innerHTML = `${object[key]}`;
+        tableData.textContent = `${object[key]}`;
         tableRow.appendChild(tableData);
       }
     }
   });
 
   btn.textContent = "Delete";
+  btn.classList.add("table-button", "delete-button");
   tableData.appendChild(btn);
   tableRow.appendChild(tableData);
 }
