@@ -1,14 +1,9 @@
 let myLibrary = [];
 
-const bookLibrary = document.querySelector(".book-library");
-const card = document.querySelector(".card");
 const form = document.querySelector(".form");
 const add = document.querySelector(".add-button1");
 const close = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
-const tableRow = document.createAttribute("tr");
-const tableData = document.createAttribute("td");
-const tableBody = document.querySelector("tbody");
 const submit = document.querySelector(".submit");
 
 function Book(title, author, read) {
@@ -19,10 +14,8 @@ function Book(title, author, read) {
 
 function addBookToLibrary(title, author, read) {
   const book = new Book(title, author, read);
-  return (myLibrary += book);
+  return myLibrary.push(book);
 }
-
-function bookLoop() {}
 
 function openTheForm() {
   form.style.display = "flex";
@@ -48,11 +41,43 @@ window.addEventListener("click", function (event) {
   }
 });
 
+function addLibrary() {
+  const tableBody = document.querySelector("tbody");
+  const tableRow = document.createElement("tr");
+  const btn = document.createElement("button");
+  const tableData = document.createElement("td");
+
+  myLibrary.forEach((object) => {
+    tableBody.appendChild(tableRow);
+
+    for (let key in object) {
+      if (object.hasOwnProperty(key)) {
+        if (key.read) {
+          btn.textContent = `${object[key]}`;
+          const tableData = document.createElement("td");
+          tableData.appendChild(btn);
+          tableRow.appendChild(tableData);
+        }
+
+        const tableData = document.createElement("td");
+        tableData.innerHTML = `${object[key]}`;
+        tableRow.appendChild(tableData);
+      }
+    }
+  });
+
+  btn.textContent = "Delete";
+  tableData.appendChild(btn);
+  tableRow.appendChild(tableData);
+}
+
 submit.addEventListener("click", () => {
   let bookTitle = document.querySelector(".book-title").value;
   let bookAuthor = document.querySelector(".book-author").value;
   let readOrUnread = document.querySelector("input[name=read]:checked").value;
 
-  addBookToLibrary(bookTitle, bookAuthor, readOrUnread);
+  let newBook = addBookToLibrary(bookTitle, bookAuthor, readOrUnread);
   closeTheForm();
+  addLibrary();
+  myLibrary = [];
 });
