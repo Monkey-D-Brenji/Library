@@ -8,8 +8,8 @@
   --hover: #ebceae;
   --active: #d8b896;
   --table-border: #fadbaf;
-  --table-odd: #ffecd2;
-  --table-even: #fce5c6;
+  --table-even: #fce9cf;
+  --table-odd: #fce5c6;
 }
 
 /*Grid*/
@@ -188,7 +188,7 @@ tr:nth-child(even) td {
 }
 
 tr:nth-child(odd) td {
-  background-color: var(--table-even);
+  background-color: var(--table-odd);
 }
 
 caption {
